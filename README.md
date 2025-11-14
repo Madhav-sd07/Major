@@ -1,6 +1,6 @@
-# Scheme Finder Frontend
+# Scheme Finder Backend API
 
-Frontend application for Scheme Finder built with React and Vite.
+Backend API for the Scheme Finder application built with Node.js, Express, and MongoDB.
 
 ## Setup
 
@@ -9,31 +9,27 @@ Frontend application for Scheme Finder built with React and Vite.
    npm install
    ```
 
-2. Create a `.env` file (optional):
+2. Create a `.env` file:
    ```env
-   VITE_API_URL=http://localhost:5000/api
+   PORT=5000
+   MONGODB_URI=mongodb://localhost:27017/scheme-finder
+   JWT_SECRET=your_jwt_secret_key_here_change_in_production
+   NODE_ENV=development
    ```
 
-3. Run the development server:
+3. Start MongoDB (if running locally)
+
+4. Seed the database (optional):
+   ```bash
+   node data/seedSchemes.js
+   ```
+
+5. Run the server:
    ```bash
    npm run dev
    ```
 
-4. Build for production:
-   ```bash
-   npm run build
-   ```
+## API Documentation
 
-5. Preview production build:
-   ```bash
-   npm run preview
-   ```
-
-## Features
-
-- Responsive design with Tailwind CSS
-- React Router for navigation
-- Zustand for state management
-- React Hook Form for form handling
-- Axios for API communication
+See the main README.md for API endpoint documentation.
 
